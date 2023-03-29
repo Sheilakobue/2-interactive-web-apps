@@ -1,4 +1,6 @@
 // nwabisa.js
+// added export and const to the variable
+// added const to the last statement
 
 export const private firstname = "Nwabisa"
 export const private surname = "Gabe"
