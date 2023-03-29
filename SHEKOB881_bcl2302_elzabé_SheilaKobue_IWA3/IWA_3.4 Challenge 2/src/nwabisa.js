@@ -1,10 +1,11 @@
 // nwabisa.js
 // added export and const to the variable
 // added const to the last statement
+// removed the word private from the variables
 
-export const private firstname = "Nwabisa"
-export const private surname = "Gabe"
-export const public role = "CEO"
+export const firstname = "Nwabisa"
+export const surname = "Gabe"
+export const role = "CEO"
 
-const private display= firstname + " " + surname + " (" + role + ")"
+const  display= firstname + " " + surname + " (" + role + ")"
 document.querySelector('#nwabisa').innerText = display
