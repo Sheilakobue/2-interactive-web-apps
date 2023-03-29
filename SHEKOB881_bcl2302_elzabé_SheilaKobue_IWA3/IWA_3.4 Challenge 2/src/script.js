@@ -1,3 +1,3 @@
 // scripts.js
-
-console.log('Roles:', nwabisa.role, johanes.role, alex.role)
+import
+console.log(Roles: 'nwabisa.role, johanes.role, alex.role')

@@ -1,9 +1,9 @@
 // alex.js
 //exported the variables
 //added const
-export const private firstname = "Alex"
-export const private surname = "Naidoo"
-export const public role = "Head of Marketing"
+export const firstName = "Alex"
+export const surname = "Naidoo"
+export const role = "Head of Marketing"
 
-const private display= firstname + " " + surname + " (" + role + ")"
+const display= firstname + " " + surname + " (" + role + ")"
 document.querySelector('#alex').innerText = display

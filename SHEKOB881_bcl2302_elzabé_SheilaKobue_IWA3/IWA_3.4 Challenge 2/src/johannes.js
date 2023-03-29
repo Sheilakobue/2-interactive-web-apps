@@ -1,8 +1,10 @@
 // johannes.js
+// added export and const to the variables
+// removed the word private to the statements
 
-export const private firstname = "Johannes"
-export const private surname = "Potgieter"
-export const public role = "Intern"
+export const firstName = "Johannes"
+export const surname = "Potgieter"
+export const  role = "Intern"
 
-const private display= firstname + " " + surname + " (" + role + ")"
+const display= firstName + " " + surname + " (" + role + ")"
 document.querySelector('#johannes').innerText = display
