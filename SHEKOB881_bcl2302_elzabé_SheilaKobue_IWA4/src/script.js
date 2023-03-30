@@ -2,6 +2,7 @@
  changed cost to let
  added the ;(semicolons)
  changed :(punctuation) to =(equal sign)
+ changed status to stat
  */
 let date = 2050;
 let stat = 'parent';
@@ -14,6 +15,8 @@ added the ;(semicolons)
 added let to the date
 removed let count =, and added =
 and closed with ;(semicolon)
+added :(punctuation mark to december)
+changed status to stat
 */
 
 if (date===2050) {
@@ -34,8 +37,7 @@ if (stat === "student") {
     date = "December:";
     console.log(date, 'Day of Reconciliation');
     count += 3;
- 
-        
+         
 if (stat === "parent") {
     
     console.log(date, 'Christmas Day')
