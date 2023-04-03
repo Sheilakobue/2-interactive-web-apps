@@ -4,7 +4,7 @@
 
 export const firstName = "Johannes"
 export const surname = "Potgieter"
-export const  rolej = "Intern"
+export const  role = "Intern"
 
-const display= firstName + " " + surname + " (" + rolej + ")"
+const display= firstName + " " + surname + " (" + role + ")"
 document.querySelector('#johannes').innerText = display

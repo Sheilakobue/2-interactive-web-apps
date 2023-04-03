@@ -1,3 +1,3 @@
 // scripts.js
 
-console.log('Roles:', "CEO", "Intern", "Head of Marketing")
+console.log('Roles:', "CEO", "Intern", "Head of Marketing");
