@@ -24,13 +24,13 @@ const pens = 5 * NONE_SELECTED;
 
 
 if (location1 === 'RSA'){
-  shipping === 400 && currency1 === 'R'
+  shipping === 400 && currency1 === 'R';
 
     console.log (FREE_WARNING);
 
 }
 if(location1==='NAM'){
-  shipping === 600
+  shipping === 600 && currency1==='$';
   
   console.log(FREE_WARNING);
 }
