@@ -1,8 +1,8 @@
 
-// created a new variable called newVariable
+//The issue is "3" is a variable  
+//created a new variable called newVariable to change
 // ive changed the string to number
 // 
 const value = "3"
-const newValue= Number(value);
 
-console.log(newValue + 4 + newValue)
+console.log(Number(value) + 4 + Number(value))

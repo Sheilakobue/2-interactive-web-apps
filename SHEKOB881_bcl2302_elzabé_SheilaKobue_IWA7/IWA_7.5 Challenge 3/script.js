@@ -1,3 +1,10 @@
+//Output as a single(only a single console.log) but split into three different lines.
+//ParseInt method parses a value as a string and returns the first integer.
+// ParseInt focuses on creating a number(abstracting a number out of a variable)
+//parseInt destruct only number before the decimal
+
+//Parsefloat-gives you the number including decimal
+
 const leoName = 'Leo'
 const leoSurname = 'Musvaire     '
 const leoBalance = '-9394'
