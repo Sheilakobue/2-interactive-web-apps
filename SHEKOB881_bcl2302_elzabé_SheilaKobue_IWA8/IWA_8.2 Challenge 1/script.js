@@ -16,7 +16,7 @@ const sarahPostal = '0310'
 const leo = {
     name: leoName,
     balance: leoBalance,
-    'access id': '47afb389-8014-4d0b-aff3-e40203d2107f',
+    'access id':'47afb389-8014-4d0b-aff3-e40203d2107f',
     age: 24,
     address: {
         number: leoNumber,
@@ -37,6 +37,6 @@ const sarah = {
     }
 
 }
-console.log(leo, leo['address']['postal-code']);
-console.log(sarah, sarah['address']['postal-code']);
+console.log(leo, leo.address['postal-code']);
+console.log(sarah, sarah.address['postal-code']);
 
