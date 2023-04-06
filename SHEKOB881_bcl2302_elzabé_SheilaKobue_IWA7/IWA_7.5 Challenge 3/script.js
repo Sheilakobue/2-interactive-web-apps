@@ -15,12 +15,14 @@ const sarahBalance = '-4582.21000111'
 
 const divider = '----------------------------------'
 
-// Only change below this line
+const owed = parseFloat( -1* leoBalance) + (-1* sarahBalance)
 
-const owed = parseFloat(-1* leoBalance) +parseFloat(-1 *sarahBalance) 
-const leo = `${leoName} ${(leoSurname).trim()} Owed :R${parseFloat(-1 *leoBalance).toFixed(2)})\n`
-const sarah = `${(sarahBalance).trim()}${sarahSurname}(Owned :R${parseFloat(-1*sarahBalance).toFixed(2)})\n`
-const total = `\n\tTotal amount owed:R${(owed).toFixed(2)}`
-const result= leo + sarah + divider+total + '\n--------------------------'
+const leo = `${leoName} ${(leoSurname).trim()} Owed :R${parseFloat(-1 *leoBalance).toFixed(2)}\n`
 
-console.log(result)
+const sarah = `${sarahName} ${(sarahSurname).trim()} Owed :R${parseFloat(-1 *sarahBalance).toFixed(2)}\n`
+
+const total = `\n\t Total amount:R${parseFloat(owed).toFixed(2)}`
+
+const result= leo + sarah + divider+ total + '\n'+ divider
+
+console.log(result);
