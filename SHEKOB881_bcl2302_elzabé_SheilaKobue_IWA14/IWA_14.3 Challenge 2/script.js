@@ -1,9 +1,12 @@
 // script.js
+// created a const variables closed (a,b) into the brackets
 
+// used the return statement for execution to leave the current function and resume at the point in the code immediately after where the function is called.
 const add = (a, b) => {return a + b};
 
 const multiply = (a, b) => {return a * b};
 
+// ive added the internal to call out the functions
 function internal() {
 	const added = this.add(this.internal.a, this.internal.b)
 	const multiply = this.multiply(added, this.internal.c)
