@@ -67,10 +67,15 @@ christmasCopy.date.setMinutes(0)
 const isEarlier = christmasCopy.date.getTime() < holidays[6].date.getTime()
 console.log('New date is earlier:', isEarlier)
 
-// Log the changes made to the copied object
+
+//Only if the date is earlier should it apply the change to copied.
+
+//because the new date is false I log the changes made to the copied object
+
 console.log(`ID change: false`)
 console.log(`Name change: ${christmasCopy.name}`)
 console.log(`Date change: ${christmasCopy.date.getDate().toString().padStart(2, '0')}/${(christmasCopy.date.getMonth() + 1).toString().padStart(2, '0')}/${christmasCopy.date.getFullYear()}`)
+
 // Log the first and last holidays of the year and a randomly selected holiday date
 const holidayDates = Object.values(holidays).map(holiday => holiday.date)
 const firstHoliday = new Date(Math.min(holidayDates[3]))
