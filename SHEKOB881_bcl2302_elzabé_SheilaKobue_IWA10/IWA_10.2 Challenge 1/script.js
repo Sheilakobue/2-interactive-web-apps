@@ -54,7 +54,9 @@ const futureId = 9
 // stored the variable in an array and used the $ to call out the variable.
 console.log(holidays[futureId]|| `ID ${futureId} not created yet`)
 
-// Create a copy of the Christmas object and update the name and date
+// You are required to create a version of the Christmas object that has the date set to midnight.
+//it is also requested that i change the name from Christmas to X-mas
+//Create a copy of the Christmas object and update the name and date
 const christmasCopy = { ...holidays[6] }
 // updated the christmasCopy variable 
 christmasCopy.name = 'X-mas Day'

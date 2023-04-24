@@ -10,6 +10,7 @@ const data = {
 
 // used length-1 to get the last item
 // pop()remove the last item of the first variable
+// i have also used an arrow function
 const  first =  data.lists[0][1]
 const  second =  data.lists[1 ][1]
 const  third = data.lists[2][1]
