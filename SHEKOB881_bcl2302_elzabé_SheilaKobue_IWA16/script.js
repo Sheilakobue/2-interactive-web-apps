@@ -98,5 +98,10 @@ const MONTHS = [
     return fragment;
   }
   // [NM372], [SV782] = data
+  //ive used the querySelector method to select HTML elements with specific attribute with a given value.
+
+   //The attribute selector [data-athlete="NM372"] selects an element with the data-athlete attribute equal to "NM372",
+   
+  //and then used the appendChild method to add items to the end of the list.
   document.querySelector('[data-athlete = "NM372"]').appendChild(createHtml('NM372'));
   document.querySelector('[data-athlete ="SV782"]').appendChild(createHtml('SV782'));
