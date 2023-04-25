@@ -60,8 +60,10 @@ const MONTHS = [
     },
   };
   // Only edit below this comment
+  
   const createHtml = (athlete) => {
     //  reassign the variables
+    
     const firstName = data.response.data[athlete].firstName;
     const surname = data.response.data[athlete].surname;
     const id = data.response.data[athlete].id;
@@ -85,6 +87,7 @@ const MONTHS = [
     }
     const minutes = sum % 60;
     const hours = (sum - minutes) / 60;
+    //innerHTML to modify the HTML element
     list.innerHTML = /* html */ `
         <dt>Athlete: ${firstName +' '+ surname}</dt>
         <dt>Total Races: ${races}</dt>

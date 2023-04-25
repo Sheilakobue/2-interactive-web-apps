@@ -1,13 +1,19 @@
-// let myAge=35
-// console.log(myAge)
-// let humanDogRatio=7
-// let myDogAge = myAge * humanDogRatio
-// console.log(myDogAge)
-let bonusPoint = 50
-console.log(bonusPoint)
-bonusPoint =bonusPoint + 50
-console.log(bonusPoint)
-bonusPoint = bonusPoint-75
-console.log(bonusPoint)
-bonusPoint = bonusPoint +45
-console.log(bonusPoint)
+// initialize the count as 0
+//Listen for clicks on the increment button
+//increment the count variable when the button is clicked
+// change the count-el in the HTML to reflect the new count
+
+let countEl = document.getElementById("counter-el")
+
+console.log(countEl)
+
+let count = 0
+
+function increment() {
+
+    count = count + 1
+    countEl.innerText = count    
+    
+}
+
+
