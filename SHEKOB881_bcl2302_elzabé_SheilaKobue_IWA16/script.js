@@ -77,7 +77,7 @@ const MONTHS = [
     const month = MONTHS[date.getMonth()];
     const year = date.getFullYear();
     console.log(month)
-    let sum = 0
+    let sum = 0;
     let i = 0;
     while ( i < time.length ) {
       sum += time[i]
