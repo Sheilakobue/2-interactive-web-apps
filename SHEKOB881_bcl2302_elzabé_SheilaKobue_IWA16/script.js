@@ -100,6 +100,9 @@ const MONTHS = [
     let sum = 0;
     //initialize a counter variable to zero
     let i = 0;
+    console.log('time.length')
+    console.log(time.length)
+    
     // start a loop that will perform through an array called time.
     while ( i < time.length ) {
       //add the current element of time to the sum variable.
