@@ -12,8 +12,13 @@ let count = 0
 function increment() {
 
     count = count + 1
-    countEl.innerText = count    
+    countEl.innerText = count  
     
 }
+// create a function, save(), which logs out the count when its called
+function save() {
+    console.log(count)
+}
+
 
 
