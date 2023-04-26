@@ -60,6 +60,9 @@ const MONTHS = [
     },
   };
   // Only edit below this comment
+  //data structure that contains information about two athletes.
+
+
   //defines a function called createHtml which takes an argument called athlete.
   // this function creates an HTML element to display information about the athlete.
   
