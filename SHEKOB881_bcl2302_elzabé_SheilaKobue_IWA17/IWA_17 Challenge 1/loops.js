@@ -24,7 +24,7 @@ const createArray = (length) => {
         result
     }
 }
-
+/*
 const createData = () => {
     const current = new Date
     current.setDate(1)
@@ -56,14 +56,15 @@ const createData = () => {
 
 const addCell = (existing, classString, value) => {
     const result = /* html */ `
-        <td ${classString}>
+    
+     <td ${classString}>
             ${value}
         </td>
 
         ${existing}
     `
 }
-
+/*
 const createHtml = (data) => {
     let result = ''
 
@@ -87,12 +88,13 @@ const createHtml = (data) => {
 
         result = `<tr>${inner}</tr>`
     }
-}
+}/*
 
 // Only edit above
-
+/*
 const current = new Date()
 document.querySelector('[data-title]').innerText = `${MONTHS[current.getMonth()]} ${current.getFullYear()}`
 
 const data = createData()
 document.querySelector('[data-content]').innerHTML = createHtml(data)
+/*
