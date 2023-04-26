@@ -25,6 +25,7 @@ const createArray = (length) => {
     }
     return result;
 };
+
 const createData = function(){
     const current = new Date();
     current.setDate(1);
@@ -60,6 +61,7 @@ const addCell = function(existing, classString, value) {
 };
 const createHtml = function(data) {
     let result = '';
+
     for (let i = 0; i < data.length; i++) {
       const week = data[i];
       let inner = '';
