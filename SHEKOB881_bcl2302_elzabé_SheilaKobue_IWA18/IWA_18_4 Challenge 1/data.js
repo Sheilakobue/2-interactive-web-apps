@@ -71,8 +71,8 @@ const createUniqueId = () => {
  * @returns {object}
  */
 export const createOrderData = (props) => {
-    const { title, table, column } = props
-
+    const { title, table, column } = props;
+   
     return {
         title,
         table,

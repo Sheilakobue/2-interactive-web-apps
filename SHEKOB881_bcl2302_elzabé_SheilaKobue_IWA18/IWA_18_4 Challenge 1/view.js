@@ -88,7 +88,8 @@ export const html = {
         table: document.querySelector('[data-edit-table]'),
         id: document.querySelector('[data-edit-id]'),
         column: document.querySelector('[data-edit-column]'),
-        delete: document.querySelector('[data-edit-delete]')
+        //i renamed the delete as delete is a reserved named in JavaScript
+        deleteButton: document.querySelector('[data-edit-delete]')
     },
     help: {
         overlay: document.querySelector('[data-help-overlay]'),
