@@ -6,21 +6,19 @@ import { TABLES, COLUMNS, state } from './data.js'
  * individually prevents the JavaScript having to re-render the entire DOM every
  * time an new order is created.
  *
- * @param {object} order - the order object.
- * @returns {HTMLElement}- the created HTML element.
- * * Creates an HTML element for an order
+ * @param {object} order 
+ * @returns {HTMLElement}
  */
-
 export const createOrderHtml = (order) => {
-    const { id, title, table, created } = order;
+    const { id, title, table, created } = order
 
-    const element = document.createElement('div');
-    element.className = 'order';
-    element.draggable = true;
-    element.dataset.id = id;
+    const element = document.createElement('div')
+    element.className = 'order'
+    element.draggable = true
+    element.dataset.id = id
 
-    const hours = created.getHours().toString().padStart(2, '0');
-    const minutes = created.getMinutes().toString().padStart(2, '0');
+    const hours = created.getHours().toString().padStart(2, '0')
+    const minutes = created.getMinutes().toString().padStart(2, '0')
 
     element.innerHTML = /* html */ `
         <div class="order__title" data-order-title>${title}</div>
@@ -90,8 +88,7 @@ export const html = {
         table: document.querySelector('[data-edit-table]'),
         id: document.querySelector('[data-edit-id]'),
         column: document.querySelector('[data-edit-column]'),
-        //i renamed the delete as delete is a reserved named in JavaScript
-        deleteButton: document.querySelector('[data-edit-delete]')
+        delete: document.querySelector('[data-edit-delete]')
     },
     help: {
         overlay: document.querySelector('[data-help-overlay]'),
