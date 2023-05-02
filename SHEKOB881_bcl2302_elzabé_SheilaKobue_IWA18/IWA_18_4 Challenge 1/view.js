@@ -6,19 +6,21 @@ import { TABLES, COLUMNS, state } from './data.js'
  * individually prevents the JavaScript having to re-render the entire DOM every
  * time an new order is created.
  *
- * @param {object} order 
- * @returns {HTMLElement}
+ * @param {object} order - the order object.
+ * @returns {HTMLElement}- the created HTML element.
+ * * Creates an HTML element for an order
  */
+
 export const createOrderHtml = (order) => {
-    const { id, title, table, created } = order
+    const { id, title, table, created } = order;
 
-    const element = document.createElement('div')
-    element.className = 'order'
-    element.draggable = true
-    element.dataset.id = id
+    const element = document.createElement('div');
+    element.className = 'order';
+    element.draggable = true;
+    element.dataset.id = id;
 
-    const hours = created.getHours().toString().padStart(2, '0')
-    const minutes = created.getMinutes().toString().padStart(2, '0')
+    const hours = created.getHours().toString().padStart(2, '0');
+    const minutes = created.getMinutes().toString().padStart(2, '0');
 
     element.innerHTML = /* html */ `
         <div class="order__title" data-order-title>${title}</div>

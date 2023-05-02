@@ -67,7 +67,7 @@ const createUniqueId = () => {
  * just being created directly since several values are created automatically
  * such as a unique ID and the creation date of the order.
  *
- * @param {object} props 
+ * @param {object} props
  * @returns {object}
  */
 export const createOrderData = (props) => {
@@ -94,11 +94,13 @@ export const createOrderData = (props) => {
  * @param {object} newDragging 
  */
 export const updateDragging = (newDragging) => {
-    const { source = state.dragging.source, over = state.dragging.over } = newDragging
-    if (over === state.dragging.over) return
+    const { source = state.dragging.source, over = state.dragging.over } = newDragging;
+    if (over === state.dragging.over){
+     return;
+    }
 
     state.dragging = {
         source,
         over,
-    }
-}
+    };
+};
