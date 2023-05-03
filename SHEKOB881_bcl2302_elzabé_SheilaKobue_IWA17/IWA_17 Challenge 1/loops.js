@@ -1,4 +1,4 @@
-
+//I defined an array called Months
 const MONTHS = [
     'January',
     'February',
@@ -13,19 +13,21 @@ const MONTHS = [
     'November',
     'December',
 ]
-
+// It defines a function called getDaysInMonth that takes a Date object as input and returns the number of days in the month of that date.
 const getDaysInMonth = (date) => new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate()
 
 // Only edit below 
-
+// created a function that takes length as input and returns an array containing integer from 0 to the length-1
 const createArray = (length) => {
     const result = [];
     for (let i = 0; i < length; i++) {
         result.push(i);
     }
     return result;
+   
 };
-
+//createData that creates an array of objects representing the calendar table data for the current month. 
+//It does this by calculating the start day of the month
 const createData = function(){
     const current = new Date();
     current.setDate(1);
@@ -56,9 +58,11 @@ const createData = function(){
         }
         return weeks;
 };
+//It defines a function called addCell that takes an existing HTML string, a CSS class for a table cell, and a value for the cell, and returns a new HTML string with the new cell added.
 const addCell = function(existing, classString, value) {
     return `${existing}<td class="${classString}">${value}</td>`;
 };
+//It defines a function called createHtml that takes an array of calendar table data and returns an HTML string representing the table.
 const createHtml = function(data) {
     let result = '';
 

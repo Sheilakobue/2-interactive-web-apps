@@ -14,7 +14,8 @@ import { createOrderHtml,html,updateDraggingHtml } from "./view.js";
  *
  * @param {Event} event 
  */
-//used a function handleHelpToggle that retrieves an element from
+//used a function handleHelpToggle to retrieves an HTML elements 
+//it hides or show a help overlay
 const handleHelpToggle = (event) => {
   const overlay = html.help.overlay;
   overlay.show();
@@ -23,64 +24,82 @@ const handleHelpToggle = (event) => {
   }
 };
 
-const handleAddToggle = (e) => {
+//this function shows or hide an "add" overlay
+//handleAddToggle function focuses on specific HTML elements, with a parameter (event2)
+const handleAddToggle = (event2) => {
   html.other.add.focus();
   const overlay = html.add.overlay;
   overlay.show();
-  if (e.target === html.add.cancel) {
+  if (event2.target === html.add.cancel) {
     overlay.close();
     html.add.form.reset();
   }
 };
-const handleAddSubmit = (e) => {
-  e.preventDefault();
+// This function triggers when a form is submitted 
+// FormData object, creates new data using a createOrderData()
+//creates new HTML using a createOrderHtml()
+
+const handleAddSubmit = () => {
+  event2.preventDefault();
   const overlay = html.add.overlay;
-  const formData = new FormData(e.target);
+  const formData = new FormData(event2.target);
   const data = Object.fromEntries(formData);
   const newData = createOrderData(data);
   const htmlData = createOrderHtml(newData);
   const append = document.querySelector('[data-area="ordered"]');
-  e.target.reset();
+  event2.target.reset();
   overlay.close();
   append.appendChild(htmlData);
 };
-const handleEditToggle = (e) => {
+
+//A function that shows or hides an "Edit" overlay. 
+//A function that is triggered when an "Edit" form is submitted.
+
+const handleEditToggle = (event2) => {
   const overlay = html.edit.overlay;
   const cancelBtn = html.edit.cancel;
   const input = html.edit.title;
   const select = html.edit.table;
   const option = html.edit.column;
-  e.target.dataset.id ? overlay.show() : undefined;
-  const id = e.target.dataset.id ? e.target.dataset.id : undefined;
-  input.value = e.target.dataset.id
-    ? e.target.querySelector(".order__title").textContent
+
+  event2.target.dataset.id ? overlay.show() : undefined;
+  const id = event2.target.dataset.id ? event2.target.dataset.id : undefined;
+  input.value = event2.target.dataset.id
+    ? event2.target.querySelector(".order__title").textContent
     : undefined;
-  select.value = e.target.dataset.id
-    ? e.target.querySelector(".order__value").textContent
+  select.value = event2.target.dataset.id
+    ? event2.target.querySelector(".order__value").textContent
     : undefined;
   let section = document.querySelector(`[data-id="${id}"]`);
   option.value = section ? section.closest("section").dataset.area : "";
-  if (e.target === cancelBtn) {
+  if (event2.target === cancelBtn) {
     overlay.close();
   }
   html.edit.delete.id = id;
 };
-const handleEditSubmit = (e) => {
-  e.preventDefault();
+
+// A function that is triggered when an "Edit" form is submitted
+//it retrieves the id of the element to be deleted, removes the element from the page, retrieves the form data using a FormData object, creates new data using a 
+const handleEditSubmit = (event2) => {
+  event2.preventDefault();
   const idRemove = html.edit.delete.id;
   const orderDelete = document.querySelector(`[data-id="${idRemove}"]`);
   orderDelete.remove();
   const overlay = html.edit.overlay;
-  const formData = new FormData(e.target);
+  const formData = new FormData(event2.target);
   const data = Object.fromEntries(formData);
+  //creates new HTML using a createOrderHtml()
   const newData = createOrderData(data);
   const htmlData = createOrderHtml(newData);
   const appended = document.querySelector(`[data-area="${newData.column}"]`);
   appended.appendChild(htmlData);
-  e.target.reset();
+  event2.target.reset();
   overlay.close();
 };
-const handleDelete = (e) => {
+
+//A function that is triggered when a "Delete" button is clicked. 
+//The function retrieves the id of the element to be deleted,
+const handleDelete = (event2) => {
   const idToBeDeleted = html.edit.delete.id;
   const orderToBeDeleted = document.querySelector(
     `[data-id="${idToBeDeleted}"]`
@@ -89,6 +108,8 @@ const handleDelete = (e) => {
   orderToBeDeleted.remove();
   overlay.close();
 };
+// this lines add a click event listener to an HTML element
+
 html.add.cancel.addEventListener("click", handleAddToggle); //
 html.other.add.addEventListener("click", handleAddToggle); //
 html.add.form.addEventListener("submit", handleAddSubmit); //
@@ -126,14 +147,14 @@ const handleDragOver = (event) => {
   updateDraggingHtml({ over: column });
 };
 let dragged;
-const handleDragStart = (e) => {
-  dragged = e.target;
+const handleDragStart = (event2) => {
+  dragged = event2.target;
 };
-const handleDragDrop = (e) => {
-  e.target.append(dragged);
+const handleDragDrop = (event2) => {
+  event2.target.append(dragged);
 };
-const handleDragEnd = (e) => {
-  const background = e.target.closest("section");
+const handleDragEnd = (event2) => {
+  const background = event2.target.closest("section");
   background.style.backgroundColor = "";
 };
 
