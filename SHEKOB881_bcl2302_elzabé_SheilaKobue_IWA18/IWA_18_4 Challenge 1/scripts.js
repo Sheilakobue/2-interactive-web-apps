@@ -39,7 +39,7 @@ const handleAddToggle = (event2) => {
 // FormData object, creates new data using a createOrderData()
 //creates new HTML using a createOrderHtml()
 
-const handleAddSubmit = () => {
+const handleAddSubmit = (event2) => {
   event2.preventDefault();
   const overlay = html.add.overlay;
   const formData = new FormData(event2.target);
