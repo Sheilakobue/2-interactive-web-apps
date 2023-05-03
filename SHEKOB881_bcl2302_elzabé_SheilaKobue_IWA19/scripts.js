@@ -1,17 +1,21 @@
-import { } from "./data.js";
+import { BOOKS_PER_PAGE, authors } from "./data.js";
 
-matches = books
-page = 1;
+const matches = books
+const page = 1;
 
-if (!books && !Array.isArray(books)) throw new Error('Source required') 
-if (!range && range.length < 2) throw new Error('Range must be an array with two numbers')
+if (!books && !Array.isArray(books)) {
+    throw new Error('Source required');
+}
+if (!range && range.length < 2){
+    throw new Error('Range must be an array with two numbers');
+}
 
-day = {
+const day = {
     dark: '10, 10, 20',
     light: '255, 255, 255',
 }
 
-night = {
+const night = {
     dark: '255, 255, 255',
     light: '10, 10, 20',
 }
